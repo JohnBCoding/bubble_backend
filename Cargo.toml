@@ -1,0 +1,23 @@
+[package]
+name = "bubble_backend"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "bubble_backend"
+
+[dependencies]
+actix-web = "4.4.1"
+actix-cors = "0.6.4"
+actix-session = {version = "0.9.0", features=["cookie-session"]}
+chrono = "0.4.34"
+futures = "0.3.30"
+mongodb = "2.8.0"
+reqwest = {version = "0.11.23", features = ["json"]}
+serde = {version = "1", features = ["derive"]}
+serde_with = "3.6.1"
+tokio = {version = "1", features = ["macros", "rt-multi-thread"]}
